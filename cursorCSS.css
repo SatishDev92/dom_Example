@@ -13,23 +13,35 @@ width: 100%;
 #main{
     height:100%;
     width:100%;
-    background-color: rgb(0,0,0
-    );
+    background-color: #111;
+    position: relative  ;  
+}
+.elm{
+    height:100px;
+    width:100%;
+    /* background-color: red; */
+    border-bottom: 2px solid white;
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
+    position: relative;
 
 }
-#cursor{
-    height:20px;
-    width:20px;
-    background-color:white;
+.elm h1{
+    font-size:6vw ;
+    position: relative;
+    z-index: 9;
     mix-blend-mode: difference;
-    border-radius: 50%;
-    position:absolute;
-    transition: all linear 0.2s;
 }
-h1{
-    font-size: 9vw;
-    font-weight: 900;
+.elm img{
+    height:100px;
+    width:100px;
+    object-fit:cover;
+    object-position: 50%;
+    border-radius:50%;
+    position: absolute;
+    transform: translate(-50,-50);
+    opacity: 0;
+    transition: all linear 0.3s ;
+
 }
