@@ -1,13 +1,19 @@
 let stat=document.querySelector("h4");
-var add=document.querySelector(
+var btn=document.querySelector(
     "#add"
 )
-add.addEventListener("click",()=>{
+let check=0;
+btn.addEventListener("click",()=>{
+    if(check==0){
     stat.innerHTML="Friend";
     stat.style.color="green";
-})
-let remove=document.querySelector("#remove")
-remove.addEventListener("click",()=>{
+    btn.innerHTML=" Remove friend" 
+    check=1
+}
+else{
     stat.innerHTML="Stranger"
     stat.style.color="red";
+    btn.innerHTML=" ADD friend" 
+    check=0
+}
 })
